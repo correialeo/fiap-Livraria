@@ -1,14 +1,14 @@
-public class Livros {
+public class Livro {
     private String nome;
     private String autor;
     private Double valor;
     private String resumo;
 
-    public Livros(){
+    public Livro(){
 
     }
 
-    public Livros(String nome, String autor, String resumo, Double valor) {
+    public Livro(String nome, String autor, String resumo, Double valor) {
         this.nome = nome;
         this.autor = autor;
         this.valor = valor;

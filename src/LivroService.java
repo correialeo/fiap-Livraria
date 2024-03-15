@@ -3,8 +3,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class LivroService {
-    Livros entity = new Livros();
-    List<Livros> livros = new ArrayList<>();
+    Livro entity = new Livro();
+    List<Livro> livros = new ArrayList<>();
     Scanner leitor = new Scanner(System.in);
 
     public void cadastrarLivro(){
@@ -16,7 +16,7 @@ public class LivroService {
         String resumo = leitor.nextLine();
         System.out.println("Qual o valor desse livro?");
         Double valor = leitor.nextDouble();
-        livros.add(new Livros(livro, autor, resumo, valor));
+        livros.add(new Livro(livro, autor, resumo, valor));
     }
 
     public void removeLivro(){
