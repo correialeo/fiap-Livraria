@@ -6,6 +6,7 @@ public class LivroService {
     Livro entity = new Livro();
     List<Livro> livros = new ArrayList<>();
     Scanner leitor = new Scanner(System.in);
+    Capa tipoCapa;
 
     public void cadastrarLivro(){
         System.out.println("Qual o nome do livro que deseja registrar?");
@@ -16,7 +17,9 @@ public class LivroService {
         String resumo = leitor.nextLine();
         System.out.println("Qual o valor desse livro?");
         Double valor = leitor.nextDouble();
-        livros.add(new Livro(livro, autor, resumo, valor));
+        System.out.println("Quantas páginas ele possui?");
+        Double paginas = leitor.nextDouble();
+        livros.add(new Livro(livro, autor, resumo, valor, paginas));
     }
 
     public void removeLivro(){

@@ -3,16 +3,39 @@ public class Livro {
     private String autor;
     private Double valor;
     private String resumo;
+    private Double paginas;
+//    private String tipoCapa;
 
     public Livro(){
 
     }
 
-    public Livro(String nome, String autor, String resumo, Double valor) {
+    public Livro(String nome, String autor, String resumo, Double valor, Double paginas) {
         this.nome = nome;
         this.autor = autor;
         this.valor = valor;
         this.resumo = resumo;
+        this.paginas = paginas;
+
+    }
+
+//    public String getTipoCapa() {
+//        return tipoCapa;
+//    }
+//
+//    public void setTipoCapa(String tipoCapa) {
+//        this.tipoCapa = tipoCapa;
+//    }
+
+    public Double getPaginas() {
+        return paginas;
+    }
+
+    public void setPaginas(Double paginas) {
+        if (paginas <= 0)
+            System.out.println("Páginas Invalidas");
+        else
+            this.paginas = paginas;
     }
 
     public String getNome() {
